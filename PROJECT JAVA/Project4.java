@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
-// Book Class
+
 class Book {
     private String title;
     private String author;
     private boolean isAvailable;
 
-    // Constructor
+
     Book(String title, String author) {
         this.title = title;
         this.author = author;
         this.isAvailable = true;
     }
 
-    // Getter methods
+
     String getTitle() {
         return title;
     }
@@ -22,28 +22,28 @@ class Book {
         return isAvailable;
     }
 
-    // Issue book
+
     void issue() {
         isAvailable = false;
     }
 
-    // Return book
+
     void returnBook() {
         isAvailable = true;
     }
 
-    // Display book details
+
     void display() {
         System.out.println(title + " by " + author + 
             " - " + (isAvailable ? "Available" : "Issued"));
     }
 }
 
-// Library Class
+
 class Library {
     private Book[] books;
 
-    // Constructor
+
     Library() {
         books = new Book[3];
 
@@ -52,7 +52,7 @@ class Library {
         books[2] = new Book("Python Fundamentals", "Guido van Rossum");
     }
 
-    // Search Book
+
     void searchBook(String title) {
         for (Book b : books) {
             if (b.getTitle().equalsIgnoreCase(title)) {
@@ -64,7 +64,7 @@ class Library {
         System.out.println("Book not found");
     }
 
-    // Issue Book
+
     void issueBook(String title) {
         for (Book b : books) {
             if (b.getTitle().equalsIgnoreCase(title)) {
@@ -81,7 +81,7 @@ class Library {
         System.out.println("Book not found");
     }
 
-    // Return Book
+
     void returnBook(String title) {
         for (Book b : books) {
             if (b.getTitle().equalsIgnoreCase(title)) {
@@ -98,7 +98,7 @@ class Library {
         System.out.println("Book not found");
     }
 
-    // Show all books
+    
     void showBooks() {
         System.out.println("\nAvailable Books:");
         for (int i = 0; i < books.length; i++) {
@@ -108,7 +108,7 @@ class Library {
     }
 }
 
-// Main Class (Fixed name)
+
 public class project4 {
     public static void main(String[] args) {
 
